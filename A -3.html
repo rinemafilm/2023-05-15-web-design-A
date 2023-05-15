@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원천문대</title>
+    <link rel="stylesheet" href="./css/A-3.css">
+    <script src="./script/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo"><a href="#"><img src="./images/A-3/logo.png" alt="강원천문대 로고"></a></div>
+            <ul class="gnb">
+                <li><a href="#">강원천문대</a>
+                    <ul>
+                        <li><a href="#">천문대소개</a></li>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">이용안내</a>
+                    <ul>
+                        <li><a href="#">프로그램</a></li>
+                        <li><a href="#">관람시간표</a></li>
+                        <li><a href="#">이달의 별자리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">천문대예약</a>
+                    <ul>
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인</a></li>
+                        <li><a href="#">예약취소</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">방문후기</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slider">
+            <div class="slide">
+                <div><a href="#"><img src="./images/A-3/slide1.png" alt="슬라이드1"></a></div>
+                <div><a href="#"><img src="./images/A-3/slide2.png" alt="슬라이드2"></a></div>
+                <div><a href="#"><img src="./images/A-3/slide3.png" alt="슬라이드3"></a></div>
+            </div>
+        </div>
+
+        <div class="contents">
+            <div class="tab">
+                <ul class="tab_title">
+                    <li class="on"><a href="#">공지사항</a></li>
+                    <li><a href="#">갤러리</a></li>
+                </ul>
+                <div class="tab_contents">
+                    <ul class="notice">
+                        <li><a href="#">2021년 2월 무이자 할부 카드 안내 2021년 2월 무이자 할부 카드 안내</a><span>2023-05-15</span></li>
+                        <li><a href="#">쿠폰 사용 안내 2021년 2월 무이자 할부 카드 안내</a><span>2023-05-12</span></li>
+                        <li><a href="#">쿠폰 다운로드 & 사용 방법</a><span>2023-05-10</span></li>
+                        <li><a href="#">모바일 앱 설치하고 10% 할인쿠폰 받자!! 2021년 2월 무이자 할부 카드 안내</a><span>2023-05-08</span></li>
+                    </ul>
+                    <ul class="gallery">
+                        <li><a href="#"><img src="./images/A-3/gal1.png" alt="갤러리1"></a></li>
+                        <li><a href="#"><img src="./images/A-3/gal3.png" alt="갤러리2"></a></li>
+                        <li><a href="#"><img src="./images/A-3/gal3.png" alt="갤러리3"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <a href="#"><img src="./images/A-3/banner (1).png" alt="배너이미지"></a>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="#">나의 계정</a></li>
+                    <li><a href="#">헤이 음악</a></li>
+                    <li><a href="#">계정 추가</a></li>
+                    <li><a href="#">클라우드</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="f_log"><a href="#"><img src="./images/A-3/f_logo.png" alt="JUST 쇼핑몰 하단 로고"></a></div>
+            <div class="copyright">
+                <p>copyright All rights reserved 강원천문대</p>
+            </div>
+            <div class="sns">
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">youtube</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal">
+        <h2>타이틀</h2>
+        <p>팝업창 내용</p>
+        <a href="#" class="close">닫기</a>
+    </div>
+
+    <script>
+        // gnb
+        $('.gnb > li').hover(function(){
+            $(this).find('ul').stop().slideDown()
+        },
+        function(){
+            $(this).find('ul').stop().slideUp()
+        })
+
+
+        
+        // slide
+        var index = 0
+        $('.slide div').eq(0).show()
+        
+        setInterval(function(){
+            var nextIndex = (index+1) % 3            
+            $('.slide div').eq(index).fadeOut()
+            $('.slide div').eq(nextIndex).fadeIn()
+            index = nextIndex
+        },3000)
+    </script>
+
+</body>
+</html>
